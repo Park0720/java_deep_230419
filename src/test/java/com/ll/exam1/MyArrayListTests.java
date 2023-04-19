@@ -5,7 +5,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 class MyArrayListTests {
     @Test
@@ -55,5 +55,28 @@ class MyArrayListTests {
         assertThat(data.length).isEqualTo(4);
 
         assertThat(list.size()).isEqualTo(3);
+    }
+    @Test
+    @DisplayName("removeElement")
+    void t05() {
+        MyArrayList<String> list = new MyArrayList<>();
+
+        list.add("사과");
+        list.add("포도");
+
+        list.remove(0);
+        list.remove(1);
+
+        assertThat(list.size()).isEqualTo(0);
+    }
+    @Test
+    @DisplayName("containsElement")
+    void t06() {
+        MyArrayList<String> list = new MyArrayList<>();
+
+        list.add("사과");
+        list.add("포도");
+        assertTrue(list.contains("사과"));
+        assertFalse(list.contains("오렌지"));
     }
 }

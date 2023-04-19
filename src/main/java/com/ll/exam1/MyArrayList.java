@@ -47,4 +47,16 @@ public class MyArrayList<T> {
     public String get(int index) {
         return data[index];
     }
+
+    public void remove(int index) {
+        data[index] = null;
+        size--;
+    }
+
+    public boolean contains(String element) {
+        for(int i = 0; i< size; i++){
+            if(data[i].equals(element)) return true;
+        }
+        return false;
+    }
 }
