@@ -92,4 +92,17 @@ class MyArrayListTests {
         assertEquals(1, list.indexOf("포도"));
         assertEquals(-1, list.indexOf("오렌지"));
     }
+    @Test
+    @DisplayName("dataClear")
+    void t08() {
+        MyArrayList<String> list = new MyArrayList<>();
+
+        list.add("사과");
+        list.add("포도");
+        list.add("오렌지");
+        list.clear();
+
+        assertEquals(0, list.size());
+        assertTrue(list.isEmpty());
+    }
 }

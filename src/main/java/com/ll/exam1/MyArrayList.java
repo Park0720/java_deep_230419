@@ -66,4 +66,16 @@ public class MyArrayList<T> {
         }
         return -1;
     }
+
+    public boolean isEmpty() {
+        if(size == 0) return true;
+        return false;
+    }
+
+    public void clear() {
+        int datasize = size;
+        for(int i = 0; i<datasize; i++){
+            remove(i);
+        }
+    }
 }
