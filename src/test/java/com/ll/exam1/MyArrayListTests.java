@@ -76,7 +76,20 @@ class MyArrayListTests {
 
         list.add("사과");
         list.add("포도");
+
         assertTrue(list.contains("사과"));
         assertFalse(list.contains("오렌지"));
+    }
+    @Test
+    @DisplayName("indexOf")
+    void t07() {
+        MyArrayList<String> list = new MyArrayList<>();
+
+        list.add("사과");
+        list.add("포도");
+
+        assertEquals(0, list.indexOf("사과"));
+        assertEquals(1, list.indexOf("포도"));
+        assertEquals(-1, list.indexOf("오렌지"));
     }
 }

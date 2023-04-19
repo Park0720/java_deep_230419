@@ -59,4 +59,11 @@ public class MyArrayList<T> {
         }
         return false;
     }
+
+    public int indexOf(String element) {
+        for(int i = 0; i< size; i++){
+            if(data[i].equals(element)) return i;
+        }
+        return -1;
+    }
 }
